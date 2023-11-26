@@ -30,14 +30,14 @@ async function checkWeather(){
   document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
   /* Displaying the image in the image container */
-  const imagePath = "./img/" + data.weather[0].main + ".png";
+  const imagePath = "./" + data.weather[0].main + ".png";
 
   /* Condition if the weather image is not in the file than showing a default image */
   imageExists(imagePath).then(() => {
     weatherImage.src = imagePath
   })
   .catch(() => {
-    weatherImage.src = "./img/clear.png"
+    weatherImage.src = "./clear.png"
   })
 
   
