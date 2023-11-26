@@ -57,6 +57,7 @@ html, body{
   border: none;
   outline: none;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .weather__container {
