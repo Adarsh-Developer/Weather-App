@@ -34,6 +34,7 @@ html, body{
   background-color: #fff;
   border-radius: 100px;
   position: relative;
+  box-shadow: 4px 4px 10px 5px #00000017;
 }
 
 .search input {
