@@ -141,7 +141,7 @@ html, body{
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .main__container{
     background: none;
     padding: 10px;
