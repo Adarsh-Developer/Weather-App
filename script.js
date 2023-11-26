@@ -29,17 +29,24 @@ async function checkWeather(){
   document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
   document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
+      
   /* Displaying the image in the image container */
-  const imagePath = "./img/" + data.weather[0].main + ".png";
-
-  /* Condition if the weather image is not in the file than showing a default image */
-  imageExists(imagePath).then(() => {
-    weatherImage.src = imagePath
-  })
-  .catch(() => {
+  if(data.weather[0].main === 'Clear'){
     weatherImage.src = "./img/clear.png"
-  })
-
+  }else if(data.weather[0].main === 'Clouds'){
+    weatherImage.src = "./img/clouds.png"
+  }else if(data.weather[0].main === 'Drizzle'){
+    weatherImage.src = "./img/drizzle.png"
+  }else if(data.weather[0].main === 'Mist'){
+    weatherImage.src = "./img/mist.png"
+  }else if(data.weather[0].main === 'Rain'){
+    weatherImage.src = "./img/rain.png"
+  }else if(data.weather[0].main === 'Snow'){
+    weatherImage.src = "./img/snow.png"
+  }else{
+    weatherImage.src = "./img/clear.png"
+  }
+  
   const windowWidth = window.innerWidth
   if(windowWidth <= 464){
     weatherContainer.style.height = "580px"
@@ -66,13 +73,3 @@ input.addEventListener("keyup", function(event){
     checkWeather()
   }
 })
-
-/* Function which is called above to get a default image when missing in the file */
-function imageExists(url){
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => resolve();
-    img.onerror = () => reject();
-    img.src = url;
-  });
-}
