@@ -7,6 +7,7 @@ const searchButton = document.querySelector(".search__btn");
 const weatherImage = document.querySelector(".weather__img")
 const weatherContainer = document.querySelector(".weather__container");
 
+input.focus()
 
 /* Fetching the url and showing the weather condition */
 async function checkWeather(){
