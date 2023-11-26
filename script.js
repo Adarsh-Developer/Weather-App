@@ -54,10 +54,13 @@ async function checkWeather() {
         if (windowWidth <= 464) {
           weatherContainer.style.height = "580px";
         } else if (windowWidth <= 505) {
-          input.blur();
           weatherContainer.style.height = "550px";
         } else {
           weatherContainer.style.height = "500px";
+        }
+
+        if (windowWidth <= 450){
+          input.blur()
         }
       }, 500);
     }
