@@ -1,0 +1,152 @@
+@font-face {
+  font-family: poppins;
+  src: url(./Poppins\ Font.woff2);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #222;
+}
+
+.main__container {
+  min-width: 150px;
+  max-width: 470px;
+  width: 90%;
+  background: linear-gradient(135deg, #f3de8a, #98c9a3);
+  border-radius: 15px;
+  padding: 40px;
+  color: #fff;
+}
+
+.search {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 100px;
+  position: relative;
+}
+
+.search input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.search .search__btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.weather__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather__container h1 {
+  font-size: 75px;
+  font-weight: 500;
+}
+
+.weather__container h2 {
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.details {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.details>div{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.detail__img {
+  height: 40px;
+
+}
+.detail__text {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin-left: 8px;
+  line-height: 22px;
+}
+
+.left .detail__img {
+  height: 35px;
+}
+
+.weather__container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+}
+
+.place{
+  text-align: center;
+  line-height: 45px;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 505px) {
+  .details>div{
+    /* flex-direction: column; */
+    align-items: center;
+    margin: auto;
+    max-width: max-content;
+    width: 100%;
+  }
+  .details{
+    width: 100%;
+  }
+}
+
+@media (max-width: 464px) {
+  .details{
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 300px) {
+  .weather__container h1{
+    font-size: 50px;
+  }
+  .weather__container h2{
+    font-size: 35px;
+  }
+}
