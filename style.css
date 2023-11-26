@@ -122,7 +122,6 @@ html, body{
 
 @media (max-width: 505px) {
   .details>div{
-    /* flex-direction: column; */
     align-items: center;
     margin: auto;
     max-width: max-content;
@@ -139,6 +138,18 @@ html, body{
     gap: 20px;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .main__container{
+    background: none;
+    padding: 10px;
+    margin: 20px auto;
+  }
+  body{
+    background: linear-gradient(135deg, #f3de8a, #98c9a3);
+    display: block;
   }
 }
 
