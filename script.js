@@ -10,7 +10,7 @@ const weatherContainer = document.querySelector(".weather__container");
 input.focus();
 setTimeout(function(){
   input.click();
-}, 100)
+}, 200)
 
 /* Fetching the url and showing the weather condition */
 async function checkWeather() {
