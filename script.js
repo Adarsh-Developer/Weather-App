@@ -60,6 +60,7 @@ async function checkWeather(){
   }
 
   input.value = ""
+  input.blur()
 }
 
 /* Displaying the data when we click the search button */
