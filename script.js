@@ -8,6 +8,7 @@ const weatherImage = document.querySelector(".weather__img");
 const weatherContainer = document.querySelector(".weather__container");
 
 input.focus();
+input.click();
 
 /* Fetching the url and showing the weather condition */
 async function checkWeather() {
