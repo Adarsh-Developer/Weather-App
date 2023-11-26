@@ -1,6 +1,5 @@
 const apiKey = "5d5545c40211e88b661a0f3c28509eaa";
-const apiUrl =
-  "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 /* Defining Variables */
 const input = document.querySelector(".input__place");
@@ -59,8 +58,8 @@ async function checkWeather() {
           weatherContainer.style.height = "500px";
         }
 
-        if (windowWidth <= 450){
-          input.blur()
+        if (windowWidth <= 450) {
+          input.blur();
         }
       }, 500);
     }
